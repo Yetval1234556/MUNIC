@@ -3,21 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Music Page</title>
+    <title>Music Page with Play Button</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        .play-button {
+            font-size: 24px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .play-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <h1>Welcome to My Music Page</h1>
-
-    <!-- Hidden Autoplaying and Looping Audio Element -->
-    <audio id="background-music" src="music.mp3" autoplay loop></audio>
     
-    <p>Background music is playing automatically and looping.</p>
+    <!-- Hidden Audio Element -->
+    <audio id="background-music" src="music.mp3" loop></audio>
+    
+    <!-- Large Play Button -->
+    <button class="play-button" onclick="document.getElementById('background-music').play()">Play Music</button>
+
+    <p>Click the button to start the background music.</p>
 </body>
 </html>
