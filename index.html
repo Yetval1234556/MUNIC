@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Background Music Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,22 +14,10 @@
 </head>
 <body>
     <h1>Welcome to My Music Page</h1>
-    <audio id="audioPlayer" controls>
-        <source src="music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-        window.onload = function() {
-            var audio = document.getElementById('audioPlayer');
-            // Attempt to play the audio after a short delay
-            setTimeout(function() {
-                audio.play().catch(error => {
-                    console.log('Autoplay failed:', error);
-                    // Inform the user they need to interact
-                    alert('Please click the play button on the audio player to start the music.');
-                });
-            }, 1000); // 1 second delay
-        };
-    </script>
+
+    <!-- Hidden Autoplaying and Looping Audio Element -->
+    <audio id="background-music" src="music.mp3" autoplay loop></audio>
+    
+    <p>Background music is playing automatically and looping.</p>
 </body>
 </html>
